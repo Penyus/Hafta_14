@@ -1,0 +1,6 @@
+SELECT AVG(toplam) 
+FROM (
+    SELECT musteri_kodu, SUM(sut_lt) AS toplam
+    FROM alinan_sut
+    GROUP BY musteri_kodu
+) 

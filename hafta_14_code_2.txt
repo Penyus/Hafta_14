@@ -1,0 +1,3 @@
+select musteri_kodu, sum(sut_lt)as toplam_sut from alinan_sut
+group by musteri_kodu
+order by toplam_sut desc

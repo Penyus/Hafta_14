@@ -1,0 +1,5 @@
+SELECT alinan_sut.musteri_kodu, SUM (alinan_sut.sut_tutar) as b, SUM (verilen_urun.urun_tutar)
+FROM alinan_sut INNER JOIN verilen_urun ON
+alinan_sut.musteri_kodu = verilen_urun.musteri_kodu
+GROUP BY alinan_sut.musteri_kodu, alinan_sut.sut_tutar, verilen_urun.urun_tutar
+ORDER BY b desc

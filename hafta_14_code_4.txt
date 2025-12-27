@@ -1,0 +1,3 @@
+select sum(sut_tutar)
+from alinan_sut
+WHERE tarih BETWEEN  '2014-12-01' AND '2014-12-31'
